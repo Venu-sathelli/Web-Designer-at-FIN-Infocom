@@ -1,0 +1,78 @@
+/* Floating Shape Styles */
+
+.floating-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Circle shapes */
+.floating-shape-circle {
+  border-radius: 50%;
+  width: var(--shape-size, 100px);
+  height: var(--shape-size, 100px);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Rectangle shapes */
+.floating-shape-rectangle {
+  width: var(--shape-size, 100px);
+  height: calc(var(--shape-size, 100px) * 0.6);
+  border-radius: var(--radius-lg);
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Position variants */
+.floating-shape-top-left {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.floating-shape-top-right {
+  top: 15%;
+  right: 5%;
+  animation-delay: 1s;
+}
+
+.floating-shape-bottom-left {
+  bottom: 10%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.floating-shape-bottom-right {
+  bottom: 15%;
+  right: 5%;
+  animation-delay: 1.5s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(10px);
+  }
+}
+
+/* Blur effect for floating shapes */
+.floating-shape {
+  filter: blur(1px);
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .floating-shape {
+    opacity: 0.08 !important;
+    --shape-size: calc(var(--shape-size, 100px) * 0.7);
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-shape {
+    opacity: 0.05 !important;
+    --shape-size: calc(var(--shape-size, 100px) * 0.5);
+  }
+}

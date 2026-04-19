@@ -1,0 +1,204 @@
+/* Features Section Styles */
+
+.features-section {
+  padding: var(--spacing-6xl) 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: var(--spacing-5xl);
+}
+
+.features-title {
+  font-size: clamp(1.25rem, 8vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2xl);
+  letter-spacing: -0.8px;
+  word-spacing: 0.1em;
+}
+
+.features-title span {
+  font-weight: 700;
+}
+
+.features-divider {
+  width: 140px;
+  height: 6px;
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  margin: var(--spacing-2xl) auto var(--spacing-xl);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.2);
+}
+
+.features-subtitle {
+  font-size: clamp(0.9375rem, 2.5vw, 1.125rem);
+  color: var(--text-secondary);
+  max-width: 700px;
+  
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+}
+
+/* Carousel Container */
+.features-carousel {
+  /* margin-top: var(--spacing-4xl); */
+}
+
+/* Features entrance animations */
+.features-header[data-aos],
+.features-title[data-aos],
+.features-subtitle[data-aos],
+.features-carousel[data-aos] {
+  will-change: opacity, transform;
+}
+
+.features-carousel-skeleton {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-4xl);
+}
+
+/* Error State */
+.error-state {
+  padding: var(--spacing-4xl) var(--spacing-2xl);
+  text-align: center;
+  background: #fef2f2;
+  border-radius: var(--radius-2xl);
+  max-width: 500px;
+  margin: var(--spacing-4xl) auto;
+}
+
+.error-state h2 {
+  color: #991b1b;
+  margin-bottom: var(--spacing-md);
+}
+
+.error-state p {
+  color: #7c2d2d;
+  margin-bottom: var(--spacing-xl);
+}
+
+.retry-button {
+  background: #991b1b;
+  color: white;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+}
+
+.retry-button:hover {
+  background: #7c2d2d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .features-section {
+    padding: var(--spacing-5xl) 0;
+  }
+
+  .features-carousel-skeleton {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .features-header {
+    margin-bottom: var(--spacing-4xl);
+  }
+
+  .features-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .features-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .features-divider {
+    width: 100px;
+    height: 3px;
+  }
+
+  .features-carousel-skeleton {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .features-header {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .features-title {
+    font-size: clamp(1.25rem, 4vw, 1.875rem);
+  }
+
+  .features-subtitle {
+    font-size: var(--text-sm);
+  }
+}
+
+/* Header Skeleton */
+.features-header-skeleton {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+}
+
+.skeleton-header {
+  width: 60%;
+  height: 56px;
+  margin: 0 auto var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 25%,
+    var(--border-light) 50%,
+    var(--bg-gray) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.skeleton-subtitle {
+  width: 80%;
+  height: 20px;
+  margin: var(--spacing-2xl) auto var(--spacing-md);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--bg-gray) 25%,
+    var(--border-light) 50%,
+    var(--bg-gray) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

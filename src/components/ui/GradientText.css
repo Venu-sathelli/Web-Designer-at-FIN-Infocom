@@ -1,0 +1,15 @@
+/* Gradient Text Styles */
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-bold);
+}
+
+/* Ensure the gradient text is visible */
+.gradient-text::selection {
+  background: var(--primary-blue);
+  -webkit-text-fill-color: var(--text-white);
+}

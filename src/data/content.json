@@ -1,0 +1,96 @@
+{
+  "navigation": {
+    "logo": {
+      "src": "https://via.placeholder.com/120x40/1a1a1a/ffffff?text=Grafterr",
+      "alt": "Grafterr Logo"
+    },
+    "links": [
+      {
+        "label": "Products",
+        "href": "#products"
+      },
+      {
+        "label": "Solutions",
+        "href": "#solutions"
+      }
+    ],
+    "cta": {
+      "label": "Get Started",
+      "href": "#"
+    }
+  },
+  "hero": {
+    "headlinePrefix": "Looking for a new",
+    "headlineGradient": "technology provider?",
+    "subheadline": "Explore our success stories to see how businesses like yours have transformed with Grafterr's technology",
+    "cta": {
+      "label": "Learn more",
+      "href": "#"
+    },
+    "decorativeShapes": {
+      "circle": {
+        "color": "#06B6D4",
+        "top": "10%",
+        "left": "10%",
+        "size": "120px"
+      },
+      "rectangle": {
+        "color": "#F43F5E",
+        "top": "60%",
+        "right": "5%",
+        "width": "100px",
+        "height": "60px"
+      }
+    }
+  },
+  "featuresSection": {
+    "titlePrefix": "More ways",
+    "titleGradient": "Grafterr",
+    "titleSuffix": "can help you grow your business",
+    "subtitle": "An award-winning, end-to-end restaurant technology & payments platform, designed to streamline food service and automate complex venue operations",
+    "products": [
+      {
+        "id": 1,
+        "title": "Point of sale",
+        "image": "/assets/service2.png"
+      },
+      {
+        "id": 2,
+        "title": "Self-service",
+        "image": "/assets/SERVICE1.png"
+      },
+      {
+        "id": 3,
+        "title": "Kitchen management",
+        "image": "/assets/service.png"
+    
+      },
+            {
+        "id": 4,
+        "title": "Point of sale",
+        "image": "/assets/service2.png"
+      },
+      {
+        "id": 5,
+        "title": "Self-service",
+        "image": "/assets/SERVICE1.png"
+      },
+      {
+        "id": 6,
+        "title": "Kitchen management",
+        "image": "/assets/service.png"
+    
+      }
+      
+    ],
+    "carousel": {
+      "itemsPerView": {
+        "mobile": 1,
+        "tablet": 2,
+        "desktop": 3
+      },
+      "showArrows": true,
+      "slideTransitionDuration": 300
+    }
+  }
+}

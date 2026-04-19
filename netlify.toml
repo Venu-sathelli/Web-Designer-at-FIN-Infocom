@@ -1,0 +1,43 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Serve static assets directly (prevents CSS/JS from being rewritten)
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/favicon.svg"
+  to = "/favicon.svg"
+  status = 200
+
+[[redirects]]
+  from = "/icons.svg"
+  to = "/icons.svg"
+  status = 200
+
+# SPA fallback for app routes only
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache control headers for assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cache control for root
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

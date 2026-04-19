@@ -1,0 +1,56 @@
+/* Gradient Button Styles */
+
+.gradient-button {
+  background: var(--gradient-primary);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.gradient-button:hover:not(:disabled) {
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.gradient-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+}
+
+.gradient-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.gradient-button-sm {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--text-sm);
+  min-height: 32px;
+}
+
+.gradient-button-md {
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: var(--text-base);
+  min-height: 44px;
+}
+
+.gradient-button-lg {
+  padding: 15px 40px;
+  font-size: var(--text-lg);
+  min-height: 5px;
+}
+
+/* Focus State */
+.gradient-button:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
